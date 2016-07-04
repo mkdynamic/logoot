@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Char7</title>
+  <style>
+    body {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+    #editor {
+      -webkit-appearance: none;
+      display: block;
+      box-sizing: border-box;
+      width: 600px;
+      height: 100vh;
+      margin: 0 auto;
+      padding: 50px 0;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      line-height: 24px;
+      font-family: Input Mono Narrow;
+    }
+  </style>
+</head>
+<body>
+  <textarea id="editor" autofocus></textarea>
+  <script src="lib/utils.js"></script>
+  <script src="lib/model/doc.js"></script>
+  <script src="lib/model/site.js"></script>
+  <script src="lib/view/event_bus.js"></script>
+  <script src="lib/view/textarea_monitor.js"></script>
+  <script src="lib/view/editor.js"></script>
+  <script>
+    var doc = new Doc("doc1");
+    var site = new Site(genRandomIntExclusive(1, 100));
+    var eventBus = new EventBus;
+    var element = document.getElementById("editor");
+    var editor = new Editor(element, site, doc, eventBus);
+  </script>
+</body>
+</html>
