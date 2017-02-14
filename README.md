@@ -4,6 +4,15 @@
 
 Collaborative text editor using [Logoot CRDT algorithm](https://hal.inria.fr/inria-00336191/PDF/main.pdf). Adds an informal versioning scheme based on state vectors to ensure casual ordering of operations is maintained.
 
+## How to run
+
+Install NodeJs and run the server with:
+
+    nodejs index.js
+
+Then open http://localhost:8080/ in your browser and type into the text-area.
+
+
 ## License
 
 Copyright (c) 2016 by Mark Dodwell
